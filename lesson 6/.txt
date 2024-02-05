@@ -1,0 +1,168 @@
+push(…items)
+pop()
+shift()
+unshift(…items)
+slice(start, end)
+1.push(…items)
+
+Demak, bizda arr o’zgaruvchisi bor va u [1,2,3,4] qiymatini o’zida saqlayapti. Agar biz bu arrayga 5 ni qo’shmoqchi bo’lsak nima qilamiz ?
+
+arr.push(5) // [1,2,3,4,5]
+
+push() metodi orqali, har qanday array ning oxiriga har qancha qiymat qo’shishimiz mumkin. Biz hozirgina 5 raqamini arr ga qo’shdik. Agar 6,7,8 ni ham qo’shmoqchi bo’lsak, shunchaki:
+
+arr.push(6,7,8); // [1,2,3,4,5,6,7,8]
+
+desak kifoya. Eslatib o’taman, bu metod Arrayning oxiriga yangi qiymat qo’shadi!
+
+2.pop()
+
+Endi agar biz arrayning oxiridan bir qiymatni olib tashlamoqchi bo’lsak qanday yo’l tutamiz ?
+
+arr = [1,2,3,4];
+
+arr.pop(); // bu holatda arraydan 4 qiymati olib tashlandi. arr esa [1,2,3] ga teng.
+
+Bu holatda, arrayning oxiridan bitta qiymatni olib tashladik.
+
+3.shift()
+
+Xo’sh, demak biz arrayni oxiridan qiymat olishni o’rgandik, agar arrayning boshidan olishimizga to’gri kelsa qanday yo’l tutamiz ? 🤨🤔
+
+arr = [1,2,3,4];
+
+arr.shift(); // arr qiymati endi [2,3,4]
+
+bu metod orqali , arrayning boshidagi qiymatni olib tashlashimiz mumkin.
+
+4.unshift()
+
+Nima qoldi yana ? 🤔
+
+Ha, Arrayning boshiga qiymat qo’shish. Biz oxiriga qo’shishni ko’rdik. Ammo boshigachi ?
+
+arr = [3,4,5];
+
+arr.unshift(1,2) // arr ning qiymati endi [1,2,3,4,5] ga teng
+
+demak bu metod orqali biz arraylarning boshiga yangi qiymatlarni qo’shishimiz mumkin ekan.
+
+5.slice(start, end)
+
+Tasavvur qiling, Bizda [1,2,3,4,5,6,7] qiymatlarini o’zida saqlayotgan bir array bor.
+
+Bizga berilgan vazifa shuki, boshqa array yaratib, bu birinchi arraydan faqatgina [3,4,5] qiymatlarini olib yangisiga berish. Ya’ni birinchi array ga tegmagan holda, uni ichidagi ayrim qiymatlarni olib boshqa arrayga joylashtirish. Nima qilamiz ? 🤨
+
+slice() metodidan foydalanamiz. Qanday ?
+
+Misol:
+let first = [1,2,3,4,5,6,7];
+
+let second = first.slice(2,5) // second = [3,4,5];
+
+Bu yerda slice() metodi birinchi arrayda 2 dan 5 chi indeksgacha bo’lgan barcha qiymatlarni ikkinchi arrayga ko’chirib olib beradi. Birinchi array ga ta’sir ko’rsatmagan holda.
+
+Agar biz , 2-indeksdan boshlab qolgan barcha qiymatni olmoqchi bo’lsakchi ?
+
+Ya’ni, [3,4,5,6,7] qiymatini. Bu vaziyatda slice metodiga shunchaki ikkinchi argumentni bermaymiz xolos. Ya’ni qayergachaligini aytmaymiz. Metod esa barchasini bizga olib beradi.
+
+P.S: Indekslar 0 dan boshlab sanaladi.
+
+splice()
+concat()
+forEach()
+indexOf()/lastIndexOf()
+includes()
+splice(start, deleteCount, …elementsToReplace)
+
+Demak, splice() metodidan boshlaymiz.
+
+Bu metod vazifalari:
+
+Arraydan biz xohlagancha miqdorda element(lar)ni o’chirib tashlaydi.
+O’chirilgan element(lar)ni o’rniga yangi elementlarni qo’shadi.
+Argumentlari:
+
+start – bu qaysi indeksdan boshlab elementlarni o’chirishni belgilaydi. Misol uchun,birinchi argumentga 2 sonini bersak , metod arrayning ikkinchi indeksidan boshlab elementlarni o’chirishni boshlaydi.
+deleteCount – berilgan startdan ya’ni indeksdan boshlab nechta element o’chirish kerakligini aniqlaydi. Misol uchun, splice(2,2) deb yozsak, ikkinchi indeksdan boshlab 2 ta elementni o’chirish kerak degani.
+…elementsToReplace – bu argument ixtiyoriy, agar biz o’chirgan elementlar o’rniga yangi elementlarni joylashtirmoqchi bo’lsak ishlatamiz.
+Endi misollarga o’tamiz:
+
+let arr = [1,2,3,4,5,6];
+
+arr.splice(2,2) // arr = [1,2,5,6];
+
+Bu yerda arraydan [3,4] ni o’chirib tashladik.
+
+let arr = [1,2,3,4,5,6];
+
+arr.splice(2,1, «uch») // arr =  [1, 2, «uch», 4, 5, 6]
+
+bu yerda esa ikkinchi indeksda turgan 3 sonini o’chirib o’rniga «uch» ni yozdik.
+
+Harxil holatlar bilan o’zingiz sinab ko’rishingiz mumkin.
+
+Biz esa keyingi metodga o’tamiz. 😉
+
+concat(…items)
+
+Biror bir arrayga boshqa arrayni qo’shib yangi array yaratmoqchi bo’lsangiz concat() metodini ishlatsangiz bo’ladi. Misol uchun:
+
+let arr = [1,2,3];
+
+let arr2 = [4,5,6];
+
+let newArr = arr.concat(arr2); // newArr = [1,2,3,4,5,6]
+
+forEach(item, index, array)
+
+Looplar haqida ma’lumotingiz bo’lsa, arraylarni sikl bo’ylab yurishimiz uchun tahminan quyidagicha koddan foydalanar edik:
+
+for(let i = 0; i <= arr.length; i++){
+
+console.log(arr[i])
+
+}
+
+yoki, for ..of , for..in lar ham misol bo’ladi.
+
+Ammo, Arraylar ustida osonroq ishlashimiz uchun forEach() metodi ham borligini bilarmidingiz.
+
+let arr = [1,2,3];
+
+
+arr.forEach((item, index, array) => {
+
+  console.log(«item: » + item); // item: 1, item: 2 , item: 3
+
+  console.log(«index: » + index); // index: 0, index: 1, index: 2
+
+  console.log(«array: » + array); // array: [1,2,3], …
+
+})
+
+mana shu usulda ishlashimiz mumkin.
+
+indexOf(item)/lastIndexOf(item)
+
+Agar array ichidagi biror bir qiymatni indeksini bilishimiz kerak bo’lib qolsa , indexOf() metodidan foydalanamiz. Misol:
+
+let arr = [5, 8, 3, 6, 3];
+
+arr.indexOf(3); // 2
+
+ko’rib turganimizdek 3 qiymatining indeksi 2 .
+
+arr.lastIndexOf(3) // 4
+
+lastIndexOf() esa ushbu berilgan qiymatning oxirgi joylashgan indeksini qaytaradi.
+
+includes(item)
+
+Agar biror bir qiymat ushbu arrayda bor yoki yo’qligini bilmoqchi bo’lsak includes() metodidan foydalanamiz. Misol:
+
+let arr = [5, 8, 3, 6, 3];
+
+arr.includes(5) // true
+
+arr.includes(12) // false
