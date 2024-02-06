@@ -120,6 +120,19 @@
 
 // console.log(kl);
 
+// Array 9
+
+// function toqJuftIndeksliChiqar(arr) {
+//   for (var i = 1; i < arr.length; i += 2) {
+//     console.log(arr[i]);
+//   }
+//   for (var j = arr.length - 2; j >= 0; j -= 2) {
+//     console.log(arr[j]);
+//   }
+// }
+// var array = [1, 2, 3, 4, 5, 6, 7, 8];
+// toqJuftIndeksliChiqar(array);
+
 // Array 11
 
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
@@ -135,6 +148,28 @@
 // }
 
 // console.log(rangeoutSUM());
+
+
+// Array 12
+
+// function separateTruthyFalsy(arr) {
+//   var truthyArray = [];
+//   var falsyArray = [];
+
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i]) {
+//       truthyArray.push(arr[i]);
+//     } else {
+//       falsyArray.push(arr[i]);
+//     }
+//   }
+
+//   console.log("Truthy: ", truthyArray);
+//   console.log("Falsy: ", falsyArray);
+// }
+// var inputArray = [10, false, "", "Abdulaziz", null];
+// separateTruthyFalsy(inputArray);
+
 
 // Array 13
 
@@ -202,3 +237,23 @@
 
 // console.log(closestValue);
 
+
+// // ar17
+
+// function findMaxPair(arr) {
+//   if (arr.length < 2) {
+//     return "Arrayda kamida 2 ta element bo'lishi kerak";
+//   }
+//   var maxSum = arr[0] + arr[1];
+//   var maxPair = [arr[0], arr[1]];
+//   for (var i = 1; i < arr.length - 1; i++) {
+//     var currentSum = arr[i] + arr[i + 1];
+//     if (currentSum > maxSum) {
+//       maxSum = currentSum;
+//       maxPair = [arr[i], arr[i + 1]];
+//     }
+//   }
+//   return maxPair;
+// }
+// var array = [1, 3, 6, 9, 12, 8, 7];
+// console.log(findMaxPair(array));
